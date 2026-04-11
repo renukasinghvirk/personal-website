@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+  /* Flower garden: pastel purple + bright yellow */
+  --color-ink: #3b2f52;
+  --color-ink-muted: #6d6280;
+  --color-paper: #fefcff;
+  --color-paper-deep: #ede4ff;
+  --color-lilac: #ddd6fe;
+  --color-purple-soft: #c4b5fd;
+  --color-purple: #8b5cf6;
+  --color-plum: #5b21b6;
+  --color-yellow: #facc15;
+  --color-yellow-bright: #fbbf24;
+  --color-yellow-soft: #fef9c3;
+  --color-cream: #fffbeb;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[var(--color-paper)] text-[var(--color-ink)] antialiased font-sans;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  ::selection {
+    @apply bg-[var(--color-yellow-soft)] text-[var(--color-plum)];
+  }
+}
+
+@layer components {
+  .hero-flower-field {
+    background:
+      radial-gradient(ellipse 75% 55% at 12% 18%, rgba(250, 204, 21, 0.42) 0%, transparent 52%),
+      radial-gradient(ellipse 55% 45% at 88% 25%, rgba(196, 181, 253, 0.55) 0%, transparent 55%),
+      radial-gradient(ellipse 45% 40% at 70% 85%, rgba(167, 139, 250, 0.2) 0%, transparent 50%),
+      linear-gradient(168deg, #faf5ff 0%, #f3e8ff 32%, #fefce8 68%, #fff7d6 100%);
+  }
+}
