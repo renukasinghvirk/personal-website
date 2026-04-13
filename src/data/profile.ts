@@ -247,7 +247,7 @@ export const profile = {
 
   /** Place your PDF at `public/cv.pdf` (or change `pdfUrl`). */
   cv: {
-    pdfUrl: `${import.meta.env.BASE_URL}cv.pdf`,
+    pdfUrl: "/personal-website/cv.pdf",
     downloadFilename: "Renuka_Singh_Virk_CV.pdf",
   },
 
