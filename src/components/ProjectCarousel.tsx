@@ -3,6 +3,7 @@ import RichProjectDescription from "./RichProjectDescription";
 import { profile } from "../data/profile";
 
 const INTERVAL_MS = 5500;
+const withBase = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
 
 const techTagStyles = [
   "bg-purple-100/95 text-purple-950",
@@ -29,42 +30,42 @@ const orgLogoByKey: Record<
   EU: {
     label: "European Union",
     href: "https://commission.europa.eu/",
-    src: "/images/logos/EU.png",
+    src: withBase("/images/logos/EU.png"),
     fallbackMark: "EU",
     fallbackClass: "bg-blue-100 text-blue-800",
   },
   ELIAS: {
     label: "ELIAS project",
     href: "https://elias-ai.eu/",
-    src: "/images/logos/ELIAS.png",
+    src: withBase("/images/logos/ELIAS.png"),
     fallbackMark: "EL",
     fallbackClass: "bg-violet-100 text-violet-800",
   },
   IDIAP: {
     label: "Idiap",
     href: "https://www.idiap.ch/",
-    src: "/images/logos/IDIAP.png",
+    src: withBase("/images/logos/IDIAP.png"),
     fallbackMark: "ID",
     fallbackClass: "bg-amber-100 text-amber-800",
   },
   EPFL: {
     label: "EPFL",
     href: "https://www.epfl.ch/",
-    src: "/images/logos/EPFL.png",
+    src: withBase("/images/logos/EPFL.png"),
     fallbackMark: "EP",
     fallbackClass: "bg-rose-100 text-rose-800",
   },
   UZH: {
     label: "University of Zurich",
     href: "https://www.uzh.ch/en.html",
-    src: "/images/logos/UZH.png",
+    src: withBase("/images/logos/UZH.png"),
     fallbackMark: "UZ",
     fallbackClass: "bg-emerald-100 text-emerald-800",
   },
   LOGI: {
     label: "Logitech",
     href: "https://www.logitech.com/en-us",
-    src: "/images/logos/Logitech.svg",
+    src: withBase("/images/logos/Logitech.svg"),
     fallbackMark: "LG",
     fallbackClass: "bg-slate-100 text-slate-800",
   },
@@ -83,7 +84,7 @@ const snapshotMetaByTitle: Record<
 > = {
   "Ask the Migration Reports": {
     orgs: ["EU", "ELIAS", "IDIAP", "EPFL"],
-    visualSrc: "/images/logos/EU.png",
+    visualSrc: withBase("/images/logos/EU.png"),
     visualLabel: "European Commission / EU visual",
     visualPlacement: "inlineTopRight",
   },
@@ -102,7 +103,7 @@ const snapshotMetaByTitle: Record<
   },
   "Coin-image classification with AlexNet": {
     orgs: ["EPFL"],
-    visualSrc: "/images/logos/coins.png",
+    visualSrc: withBase("/images/logos/coins.png"),
     visualLabel: "Coin classification snapshot",
   },
   "Nintendo DS game": {
@@ -123,7 +124,7 @@ const snapshotMetaByTitle: Record<
   },
   "Logitech Europe SA": {
     orgs: ["LOGI"],
-    visualSrc: "/images/logos/logitech.webp",
+    visualSrc: withBase("/images/logos/logitech.webp"),
     visualLabel: "Logitech products",
     visualPlacement: "inlineTopRight",
   },
@@ -185,7 +186,7 @@ export default function ProjectCarousel({ items }: { items?: readonly Project[] 
           <div className="space-y-2">
             <div className="relative flex h-32 items-center justify-center overflow-hidden rounded-lg border border-white/70 bg-gradient-to-br from-sky-100 via-cyan-100 to-blue-200 lg:h-[10.5rem]">
               <img
-                src="/images/logos/Earth.gif"
+                src={withBase("/images/logos/Earth.gif")}
                 alt="Rotating Earth"
                 className="h-24 w-24 rounded-full object-cover shadow-md shadow-blue-300/40"
                 loading="lazy"

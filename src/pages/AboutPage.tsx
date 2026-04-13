@@ -5,6 +5,7 @@ export default function AboutPage() {
   useEffect(() => {
     document.title = `About — ${profile.name}`;
   }, []);
+  const profileImageSrc = `${import.meta.env.BASE_URL}images/logos/profile.png`;
 
   return (
     <main className="border-t border-purple-100/60 bg-gradient-to-b from-[var(--color-paper)] via-[var(--color-lilac)]/50 to-[var(--color-yellow-soft)]/45 px-5 pb-12 pt-28 sm:px-8 sm:pt-32">
@@ -43,7 +44,7 @@ export default function AboutPage() {
         </div>
         <figure className="overflow-hidden rounded-2xl border border-purple-100/90 bg-white/95 p-1 shadow-md shadow-purple-200/20">
           <img
-            src="/images/logos/profile.png"
+            src={profileImageSrc}
             alt="Portrait of Renuka with New York skyline"
             className="h-auto w-full rounded-xl object-contain"
             loading="eager"
