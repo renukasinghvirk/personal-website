@@ -5,8 +5,7 @@ export const profile = {
   tagline:
     "AI & Data Science Intern at Logitech on the SW Analytics team.\nM.Sc. in Electrical & Electronic Engineering at EPFL — ML, optimization, and signal processing.",
   location: "Lausanne, Switzerland",
-  heroNote:
-    "I'm motivated by technically challenging work with societal relevance, and I care about the intersection of engineering, ethics, and human impact.",
+  heroNote: "",
 
   currentRole: {
     company: "Logitech Europe SA",
@@ -19,8 +18,24 @@ export const profile = {
 
   intro: [
     "Right now I'm an AI & Data Science intern at Logitech with the Software (SW) Analytics team, building agent-based tooling for data analysis and decision support. In parallel I'm a Swiss M.Sc. student in Electrical & Electronic Engineering at EPFL, with experience across ML, optimization, and signal processing — from RAG for migration information to multimodal models for online safety.",
-    "Whether you're hiring, exploring a master's thesis together, or just curious about my work, there's a dedicated projects page for code and reports, plus background and research here on the home site.",
+    "Whether you're hiring, exploring a master's thesis together, or just curious about my work, there's a dedicated projects page for code and reports, and an About page for research interests and personal context.",
   ],
+
+  /** Personal note — Lake Geneva region imagery; swap `public/images/lac-leman.jpg` for your own photo anytime. */
+  roots: {
+    kicker: "Where I'm from",
+    heading: "Switzerland, mountains, and the lake",
+    paragraphs: [
+      "I grew up in Switzerland — it's home in the deepest sense: the rhythm of the language, the trains, and the way the Alps sit on the horizon like a promise.",
+      "I spend as much time as I can outside. Hiking, long walks, and quiet days in the mountains or by the water keep me grounded; they balance the screen-heavy side of my work.",
+    ],
+    imageSrc: "/images/lac-leman.jpg",
+    imageAlt: "Lake and mountains at dusk, evoking the Léman region",
+    imageCredit: {
+      label: "Stock photo (Unsplash) — replace with your own picture of the lake",
+      href: "https://unsplash.com",
+    },
+  },
 
   highlights: [
     {
@@ -45,9 +60,10 @@ export const profile = {
     {
       title: "Ask the Migration Reports",
       context: "RAG chatbot · IDIAP · EU ELIAS (Use Case 4)",
-      year: "2024",
+      year: "2025",
+      /** Use `[label](url)` for inline links; `\n\n` starts a new paragraph (rendered by RichProjectDescription). */
       description:
-        "Developed a RAG chatbot that helps migrants and refugees access official migration reports (EMN Country Factsheets), with answers grounded in sources.",
+        "I had the pleasure to contribute to the [European Union ELIAS](https://elias-project.eu/) project by developing a RAG chatbot that helps policymakers access official migration reports (EMN Country Factsheets), with answers grounded in sources.\n\nThe challenge of this work was the high-stakes context of the project and the need to ensure the accuracy and reliability of the answers provided by the chatbot, as errors could have dramatic consequences.",
       tech: ["Python", "RAG", "NLP"],
       demo: null as string | null,
       repo: "https://github.com/renukasinghvirk/qa-migration-reports",
@@ -57,7 +73,7 @@ export const profile = {
     {
       title: "AI-driven transformation of hate-speech video content",
       context: "EE-559 · multimodal ML",
-      year: "2025",
+      year: "2024",
       description:
         "Deployed a multimodal deep-learning pipeline (BERT + Meta Llama 3 8B) to detect and rephrase hateful speech in video streams.",
       tech: ["Python", "PyTorch", "BERT", "Llama"],
@@ -68,10 +84,10 @@ export const profile = {
     {
       title: "World Values Survey — interactive data visualization",
       context: "COM-480 · team project",
-      year: "2024",
+      year: "2025",
       description:
-        "Built a quiz-style visualization that maps user values to countries and explores the World Values Survey dataset in depth.",
-      tech: ["JavaScript", "D3-style viz", "Data"],
+        "Built a quiz that maps user values to countries and explores the World Values Survey dataset in depth.",
+      tech: ["JavaScript", "D3", "Data visualization"],
       demo: "https://com-480-data-visualization.github.io/data-vizards/",
       repo: "https://github.com/com-480-data-visualization/data-vizards",
       report:
@@ -80,7 +96,7 @@ export const profile = {
     {
       title: "Signal & image processing lab",
       context: "EE-490(f)",
-      year: "2024",
+      year: "2025",
       description:
         "Filtering for images, edge and object detection (including HOG), template matching, and tracking for video.",
       tech: ["Python", "OpenCV", "DSP"],
@@ -91,7 +107,7 @@ export const profile = {
     {
       title: "Coin-image classification with AlexNet",
       context: "EE-451",
-      year: "2023",
+      year: "2024",
       description:
         "Combined morphological segmentation with AlexNet-based classification to recognize coin denominations.",
       tech: ["Python", "CNN", "Segmentation"],
@@ -100,14 +116,14 @@ export const profile = {
       report: null as string | null,
     },
     {
-      title: "Clinical ML — intrusive memory & cardiovascular risk",
+      title: "Clinical ML — intrusive memory",
       context: "CS-433 · UZH",
       year: "2023",
       description:
-        "Gradient-boosted models and logistic regression to distinguish PTSD vs. CUD from survey features; logistic regression on 328k+ patients for CVD risk under imbalance.",
+        "Gradient-boosted models and logistic regression to distinguish PTSD vs. CUD from intrusive-memory survey features.",
       tech: ["Python", "Scikit-learn", "Health data"],
       demo: null as string | null,
-      repo: "https://github.com/renukasinghvirk/project_inference",
+      repo: "https://github.com/CS-433/ml-project-2-roc-stars",
       report: null as string | null,
     },
     {
@@ -122,15 +138,26 @@ export const profile = {
       report: "https://github.com/renukasinghvirk/OFDM_system/blob/main/Wireless_project_final.pdf",
     },
     {
-      title: "Game & embedded projects",
+      title: "Nintendo DS game",
       context: "EE-310 · MICRO-210 · CS-112",
       year: "2021 — 2023",
       description:
-        "Nintendo DS side-scroller in C; AVR assembly mini-games (keypad, LCD, EEPROM); ant-colony foraging simulation in C++.",
+        "Built a Temple Run-style endless-runner game for Nintendo DS in C, with obstacle timing, sprite animation, and score progression.",
       tech: ["C", "Assembly", "C++", "Embedded"],
       demo: null as string | null,
       repo: "https://github.com/renukasinghvirk/NintendoDS_project",
       report: "https://github.com/renukasinghvirk/NintendoDS_project/blob/main/REMPLE_TUN.pdf",
+    },
+    {
+      title: "MCU Party embedded game",
+      context: "MICRO-210",
+      year: "2024",
+      description:
+        "Built an AVR game suite inspired by Wii Party on the ATmega128 (keypad + LCD + STK300 setup), with multiple mini-games and progression rounds.",
+      tech: ["Assembly", "AVR", "Embedded"],
+      demo: null as string | null,
+      repo: "https://github.com/renukasinghvirk/MCU_project",
+      report: null as string | null,
     },
   ],
 
